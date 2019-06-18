@@ -112,4 +112,18 @@ class ContaController extends Controller
         $this->conta->find($id)->delete();
         return redirect()->route('gerenciarMes');
     }
+
+    /**
+     * Altera o status da conta para Pago 
+     */
+    public function pagarConta($id){
+
+        $conta = $this->conta->find($id);
+        $conta->status = "Pago";
+
+        $conta->update();
+
+        return redirect()->back();
+    }
+
 }

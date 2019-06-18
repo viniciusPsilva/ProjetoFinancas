@@ -30,7 +30,16 @@
                            <td>{{$c->nome}}</td>
                            <td>R$:{{$c->valor}}</td>
                            <td>{{$c->vencimento}}</td>
-                           <td>{{$c->status}}
+                           <td>
+                            <b 
+                                @if($c->status == "Pagar")
+                                    class = "text-danger" 
+                                @else
+                                    class="text-success" 
+                                @endif> 
+                                    {{$c->status}}
+                            </b>
+                           </td>
                            <td>
                                <a href="{{route('contas.edit',$c->id)}}"><span class="glyphicon glyphicon-edit btn-table-edit"></span></a>
                                <a href="{{route('contas.show',$c->id)}}"><span class="glyphicon glyphicon-eye-open btn-table-show"></span></a>

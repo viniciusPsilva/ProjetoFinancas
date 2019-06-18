@@ -21,6 +21,8 @@ Route::get('/teste','teste\TesteController@index');
 
 Route::get('/gerenciar/mes', 'MesController@gerenciar')->name('gerenciarMes');
 
+Route::post('/pagar/conta/{id}', 'ContaController@pagarConta')->name('pagarConta');
+
 Auth::routes();
 
 
