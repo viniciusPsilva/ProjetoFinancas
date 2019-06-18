@@ -18,6 +18,8 @@ class SiteController extends Controller
 
     public function index(){
 
+        $meses = null;
+        
         if (isset(Auth::user()->id)){
            $meses = Util::getMesToUser();
         }
