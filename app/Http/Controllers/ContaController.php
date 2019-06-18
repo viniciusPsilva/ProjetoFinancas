@@ -47,6 +47,7 @@ class ContaController extends Controller
     public function store(Request $request)
     {
         $formData = $request->all();
+        $formData['status'] = "Pagar";
         $insert = $this->conta->create($formData);
 
         $sucessMesage = "Conta adicionada com sucesso!";

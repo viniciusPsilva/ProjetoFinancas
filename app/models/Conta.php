@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Conta extends Model
 {
-    protected $fillable = ['nome','mes_id','valor','vencimento'];
+    protected $fillable = ['nome','mes_id','valor','vencimento','status'];
 
     //uma conte tem um mes
     public function mes(){

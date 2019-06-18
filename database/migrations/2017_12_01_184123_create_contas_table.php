@@ -20,6 +20,7 @@ class CreateContasTable extends Migration
             $table->foreign('mes_id')->references('id')->on('mes')->onDelete('cascade');
             $table->double('valor',10,2);
             $table->date('vencimento');
+            $table->string('status');
             $table->timestamps();
         });
     }
