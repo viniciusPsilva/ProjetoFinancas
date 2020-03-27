@@ -23,6 +23,8 @@ Route::get('/gerenciar/mes', 'MesController@gerenciar')->name('gerenciarMes');
 
 Route::post('/pagar/conta/{id}', 'ContaController@pagarConta')->name('pagarConta');
 
+Route::post('/buscar/mes/', 'SiteController@filtrarMes')->name('filtrarMes');
+
 Auth::routes();
 
 

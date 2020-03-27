@@ -33,4 +33,8 @@ class Util
 
         return $meses = Mes::all()->where('user_id', Auth::user()->id );
     }
+
+    public static function getMesByName($nome){
+       return $mes = Mes::select()->where('user_id', Auth::user()->id)->where('mes.nome', $nome)->get();
+    }
 }

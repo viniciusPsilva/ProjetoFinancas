@@ -31,11 +31,12 @@
             <!-- form de pesquisa-->
             @guest
             @else
-            <form class="navbar-form navbar-left">
+            <form class="navbar-form navbar-left" method="post" action="{{route('filtrarMes')}}">
+            {!! csrf_field() !!}
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" id="nomeMes" name="nomeMes" class="form-control" placeholder="Search">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button id="btn-enviar" name="btn-enviar" class="btn btn-default">Submit</button>
             </form>
             @endguest
             <ul class="nav navbar-nav navbar-right">

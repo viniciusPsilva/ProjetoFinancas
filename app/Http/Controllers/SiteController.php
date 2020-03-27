@@ -25,4 +25,16 @@ class SiteController extends Controller
         }
         return view('home',compact('meses'));
     }
+
+    public function filtrarMes(Request $request){
+
+        $formData = $request->all();
+
+        $nomeMes = $formData['nomeMes'];
+
+        $meses = Util::getMesByName($nomeMes);        
+
+        return view('home', compact('meses'));
+
+    }
 }
